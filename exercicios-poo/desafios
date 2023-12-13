@@ -1,0 +1,187 @@
+// ~~~~ DESAFIO 1 ~~~~
+
+class MathUtils {
+    static sum(a, b) {
+      return a + b;
+    }
+  
+    static sub(a, b) {
+      return a - b;
+    }
+  
+    static mul(a, b) {
+      return a * b;
+    }
+  
+    static div(a, b) {
+      if (b !== 0) {
+        return a / b;
+      } else {
+        console.error("Error: Division by zero.");
+        return undefined; 
+      }
+    }
+  }
+  
+  
+  console.log(MathUtils.sum(5, 3));  
+  console.log(MathUtils.sub(7, 2));  
+  console.log(MathUtils.mul(4, 6));  
+  console.log(MathUtils.div(8, 2));  
+  console.log(MathUtils.div(6, 0));
+
+
+  
+// ~~~~ DESAFIO 2 ~~~~
+
+class Circulo {
+    static calcularArea(raio) {
+      return Math.PI * Math.pow(raio, 2);
+    }
+  
+    static calcularCircunferencia(raio) {
+      return 2 * Math.PI * raio;
+    }
+  }
+  
+  const raioDoCirculo = 5;
+  console.log(`Área do círculo: ${Circulo.calcularArea(raioDoCirculo)}`);
+  console.log(`Circunferência do círculo: ${Circulo.calcularCircunferencia(raioDoCirculo)}`);
+
+
+
+  // ~~~ DESAFIO 3 ~~~
+
+  class Conta {
+    #numeroConta;
+    #nomeTitular;
+    #saldo;
+  
+    constructor(numeroConta, nomeTitular, saldo) {
+      this.#numeroConta = numeroConta;
+      this.#nomeTitular = nomeTitular;
+      this.#saldo = saldo;
+    }
+  
+    #validarSaldo(valor) {
+      if (this.#saldo >= valor) {
+        return true;
+      } else {
+        console.log("Saldo insuficiente. Saque não permitido.");
+        return false;
+      }
+    }
+  
+    depositar(valor) {
+      this.#saldo += valor;
+      console.log(`Depósito de ${valor} realizado. Novo saldo: ${this.#saldo}`);
+    }
+  
+    sacar(valor) {
+      if (this.#validarSaldo(valor)) {
+        this.#saldo -= valor;
+        console.log(`Saque de ${valor} realizado. Novo saldo: ${this.#saldo}`);
+      }
+    }
+  
+    obterInformacoes() {
+      console.log(`Conta ${this.#numeroConta} - Titular: ${this.#nomeTitular} - Saldo: ${this.#saldo}`);
+    }
+  }
+  
+  const minhaConta = new Conta(123456, "João Silva", 1000);
+  
+  minhaConta.obterInformacoes(); 
+  minhaConta.depositar(500);  
+  minhaConta.sacar(200);  
+  minhaConta.sacar(1500); 
+
+
+
+  // ~~~ DESAFIO 4 ~~~
+
+  class FiguraGeometrica {
+    calcularArea() {
+      return 0;
+    }
+  }
+  
+  class Circulo extends FiguraGeometrica {
+    constructor(raio) {
+      super();
+      this.raio = raio;
+    }
+  
+    calcularArea() {
+      return Math.PI * Math.pow(this.raio, 2);
+    }
+  }
+  
+  class Retangulo extends FiguraGeometrica {
+    constructor(largura, altura) {
+      super();
+      this.largura = largura;
+      this.altura = altura;
+    }
+  
+    calcularArea() {
+      return this.largura * this.altura;
+    }
+  }
+  
+  const circulo = new Circulo(5);
+  const retangulo = new Retangulo(4, 6);
+  
+  console.log(`Área do círculo: ${circulo.calcularArea()}`);
+  console.log(`Área do retângulo: ${retangulo.calcularArea()}`);
+
+
+  // ~~~ DESAFIO 5 ~~~
+
+  class Animal {
+    constructor(nome, idade, especie) {
+      this.nome = nome;
+      this.idade = idade;
+      this.especie = especie;
+    }
+  
+    imprimirDados() {
+      console.log(`Nome: ${this.nome}, Idade: ${this.idade}, Espécie: ${this.especie}`);
+    }
+  
+    emitirSom() {
+      console.log("O animal emite um som.");
+    }
+  }
+  
+  class Cachorro extends Animal {
+    constructor(nome, idade, tamanho) {
+      super(nome, idade, "Cachorro");
+      this.tamanho = tamanho;
+    }
+  
+    emitirSom() {
+      console.log("Au au!");
+    }
+  }
+  
+  class Gato extends Animal {
+    constructor(nome, idade, cor) {
+      super(nome, idade, "Gato");
+      this.cor = cor;
+    }
+  
+    emitirSom() {
+      console.log("Miau!");
+    }
+  }
+  
+  // Exemplo de uso:
+  const cachorro = new Cachorro("Clebinho", 3, "Grande");
+  const gato = new Gato("Minino", 2, "Branco");
+  
+  cachorro.imprimirDados();
+  cachorro.emitirSom();
+  
+  gato.imprimirDados();
+  gato.emitirSom();
