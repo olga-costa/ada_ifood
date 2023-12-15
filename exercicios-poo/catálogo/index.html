@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Geek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Catálogo Geek</h1>
+
+    <div class="catalogo" id="container-catalogo"></div>
+
+    <form id="formulario-produto">
+        <h2>Cadastro de Produto</h2>
+        <label for="nomeProduto">Nome do Produto:</label>
+        <input type="text" id="nomeProduto" required>
+        <label for="tipoProduto">Tipo de Produto:</label>
+        <input type="text" id="tipoProduto" required>
+        <button type="button" onclick="adicionarProduto()">Cadastrar Produto</button>
+    </form>
+
+    <div class="formulario-compra">
+        <h2>Compra</h2>
+        <form id="formulario-compra">
+            <label for="produtoSelecionado">Selecione um produto:</label>
+            <select id="produtoSelecionado" required></select>
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" min="1" value="1" required>
+            <button type="button" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+        </form>
+
+        <button type="button" onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+
+    <script src="catalogo.js"></script>
+    <script src="carrinho.js"></script>
+</body>
+</html>
