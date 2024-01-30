@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/countPeople.css">
+    <script src="./helpers/localStorage.js" defer></script>
+    <script src="./scripts/countPeople.js" defer></script>
+    <title>Churrascômetro | Contagem de Pessoas</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form_people_count global_form">
+            <label for="man">Quantidade de Homens</label>
+            <input type="number" name="man" id="man" class="form_input input_man">
+            <label for="woman">Quantidade de Mulheres</label>
+            <input type="number" name="woman" id="woman" class="form_input input_woman">
+            <label for="children">Quantidade de Crianças</label>
+            <input type="number" name="children" id="children" class="form_input input_children">
+            <label for="drinking">Quantidade de pessoas que irão beber</label>
+            <input type="number" name="drinking" id="drinking" class="form_input input_drinking">
+            <button type="submit" class="btn_submit">Confirmar</button>
+        </form>
+    </div>
+</body>
+</html>

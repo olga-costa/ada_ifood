@@ -1,0 +1,7 @@
+.main_form{
+    
+}
+.main_form div{
+    display: flex;
+    flex-direction: column;
+}

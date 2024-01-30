@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascômetro</title>
+    <script src="./helpers/localStorage.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/global.css">
+</head>
+<body>
+    <div class="container">
+        <form class="global_form main_form">
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" name="name" class="form_input input_name" id="name" required>
+                
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" class="form_input input_email" id="email" required>
+
+            </div>
+            <div>
+                <label for="cep">CEP</label>
+                <input type="number" name="cep" class="form_input input_cep" id="cep" required>
+            </div>
+            <div>
+                <label for="terms">Aceito receber e-mails com promoções</label>
+                <input type="checkbox" name="terms" id="terms" class="form_input input_terms" checked>
+            </div>
+            <button type="submit" class="btn_submit">Confirmar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.result_table{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+thead th{
+    border: 1px solid black;
+    padding: 8px;
+}
+.table_body{
+    border: 1px solid black ;
+}
+.table_body td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+.table_cell{
+}
