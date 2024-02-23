@@ -1,0 +1,36 @@
+.counter_card{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 160px;
+    border-radius: 8px;
+    background-color: rgb(244, 240, 173);
+    border: 1px solid rgb(194, 140, 3);
+    padding-bottom: 40px;
+    margin: 0 20px;
+}
+.card_header{
+    padding: 0 20px;
+    border: 1px solid rgb(194, 140, 3);
+    border-radius: 8px 8px 0px 0px;
+    font-size: 12px;
+    text-align: center;
+}
+.counter{
+    border: 1px solid rgb(194, 140, 3);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.counter div{
+    cursor: pointer;
+    border: 1px solid rgb(194, 140, 3);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    font-weight: 700;
+    
+}

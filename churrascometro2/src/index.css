@@ -1,0 +1,39 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.form_input{
+  width: 100%;
+}
+.global_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 28px;
+  border-radius: 8px;
+  gap: 12px;
+}
+.global_form label{
+  align-self: flex-start;
+}
+.global_form div{
+  width: 100%;
+  align-items: flex-start;
+}
+.btn_submit{
+  margin-top: 12px;
+  width: 40%;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+.btn_submit:hover{
+  scale: 1.04;
+  transition: all 0.3s;
+}

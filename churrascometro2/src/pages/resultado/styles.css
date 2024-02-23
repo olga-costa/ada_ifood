@@ -1,0 +1,25 @@
+.result_table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-bottom: 18px;
+}
+thead th{
+    border: 1px solid black;
+    padding: 8px;
+}
+.table_body{
+    border: 1px solid black ;
+}
+.table_body td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+.table_cell{
+}
+.result_container{
+    flex-direction: column;
+}
+.result_submit{
+    width: 120px;
+}

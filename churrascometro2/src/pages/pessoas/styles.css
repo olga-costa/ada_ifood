@@ -1,0 +1,10 @@
+.people_container{
+    flex-direction: column;
+}
+
+.cards{
+    display: flex;
+}
+.people_submit{
+    width: 80px;
+}
